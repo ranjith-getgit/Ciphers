@@ -1,0 +1,27 @@
+import yfinance as yf
+
+# Define the ticker symbol for the stock or ETF
+ticker_symbol = "TSLA"  # Example: Apple Inc.
+
+# Create a Yahoo Finance object for the stock
+stock = yf.Ticker(ticker_symbol)
+
+# Retrieve options data
+options_data = stock.options
+
+# Display the options data
+print(options_data)
+
+# Fetch specific options contracts for a particular expiration date
+expiration_date = "2024-03-15"  # Example: Choose an expiration date from the list
+options = stock.option_chain(expiration_date)
+
+# Access call and put options data
+call_options = options.calls
+put_options = options.puts
+
+# Display the call and put options data
+print("Call Options:")
+print(call_options)
+print("Put Options:")
+print(put_options)
