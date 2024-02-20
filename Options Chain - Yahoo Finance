@@ -1,7 +1,7 @@
 import yfinance as yf
 
 # Define the ticker symbol for the stock or ETF
-ticker_symbol = "TSLA"  # Example: Apple Inc.
+ticker_symbol = "TSLA"
 
 # Create a Yahoo Finance object for the stock
 stock = yf.Ticker(ticker_symbol)
