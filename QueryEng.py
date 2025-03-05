@@ -111,7 +111,8 @@ class UI:
     def query_loop(self):
         """Interactive loop for user SQL queries and plotting."""
         while True:
-            user_query = input("\nEnter your SQL query, 'back' to reload data, or 'exit' to quit: ").strip()
+            print("\nEnter your SQL query (or type 'back' to reload data, 'exit' to quit):")
+            user_query = sys.stdin.readline().strip()  # Accepts long queries properly
             if user_query.lower() == 'exit':
                 print("Exiting program..")
                 sys.exit()
